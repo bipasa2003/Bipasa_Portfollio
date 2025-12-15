@@ -316,6 +316,18 @@ img {
 .home_scroll-arrow{
   font-size: 1.25rem;
 }
+/* ===========Frontend Developer typing animation =========== */
+#typing-text::after {
+  content: "|";
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
 /*==================== BUTTONS ====================*/
 .button{
   display: inline-block;

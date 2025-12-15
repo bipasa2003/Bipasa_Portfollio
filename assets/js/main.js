@@ -53,3 +53,17 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
 /*==================== DARK LIGHT THEME ====================*/ 
+
+/*==================== frontend developer running animation ====================*/
+ const text = "Frontend Developer";
+  let index = 0;
+
+  function typeEffect() {
+    if (index < text.length) {
+      document.getElementById("typing-text").innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeEffect, 120); // typing speed
+    }
+  }
+
+  window.onload = typeEffect;
