@@ -317,7 +317,7 @@ img {
   margin-right: var(--mb-0-25);
 }
 
-.home_scroll-arrow{
+.home__scroll-arrow{
   font-size: 1.25rem;
 }
 /* ===========Frontend Developer typing animation =========== */
@@ -571,10 +571,9 @@ img {
   margin-right: var(--mb-1-5);
 }
 
-footer__social:hover{
-  color:var(--first-color-lighter);
+.footer__social:hover{
+  color: var(--first-color-lighter);
 }
-
 .footer__copy{
   font-size: var(--smaller-font-size);
   text-align: center;
