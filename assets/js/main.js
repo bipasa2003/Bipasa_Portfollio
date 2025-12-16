@@ -101,5 +101,4 @@ window.addEventListener('scroll', scrollHeader)
       setTimeout(typeEffect, 120); // typing speed
     }
   }
-
   window.onload = typeEffect;
