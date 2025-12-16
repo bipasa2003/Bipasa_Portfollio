@@ -499,7 +499,7 @@ img {
   width: 75%;
 }
 
-.skills__closed .skills__list{
+.skills__close .skills__list{
   height: 0;
   overflow: hidden;
 }
