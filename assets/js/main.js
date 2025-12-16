@@ -29,7 +29,20 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== ACCORDION SKILLS ====================*/
-
+const skillsContent = document.getElementsByClassName('skills__content'),
+      skillsHeader = document.querySelectorAll('.skills__header')
+function toggleSkills(){
+    let itemClass = this.parentNode.className
+    for(i = 0; i < skillsContent.length; i++){
+        skillsContent[i].className = 'skills__content skills__close'
+    }   
+    if(itemClass === 'skills__content skills__close'){
+        this.parentNode.className = 'skills__content skills__open'
+    }
+}
+skillsHeader.forEach((el) =>{
+    el.addEventListener('click', toggleSkills)
+})
 
 /*==================== QUALIFICATION TABS ====================*/
 const tabs = document.querySelectorAll('[data-target]'),
@@ -54,9 +67,38 @@ tabs.forEach(tab =>{
 
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-
+let swiperPortfolio = new Swiper(".portfolio__container", {
+    cssMode: true,
+    loop:true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable:true,
+    },
+});
 
 /*==================== TESTIMONIAL ====================*/
+let swiperTestimonial = new Swiper(".testimonial__container", {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 48,
+
+    pagination: {
+        el: ".swiper-pagination-testimonial",
+        clickable: true,
+        dynamicBullets: true,
+    },
+
+    breakpoints: {
+        568: {
+            slidesPerView: 2,
+        },
+    },
+});
+
 
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
@@ -104,5 +146,4 @@ window.addEventListener('scroll', scrollHeader)
       setTimeout(typeEffect, 120); // typing speed
     }
   }
-
   window.onload = typeEffect;
